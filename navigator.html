@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+
+<p>Displaying location using Latitude and Longitude</p>
+
+
+
+
+<button class="geeks" onclick="main()">
+	Click Me
+</button>
+<p id="demo1"></p>
+
+
+
+
+<script>
+function main()
+{
+if ('geolocation' in navigator) {
+	navigator.geolocation.getCurrentPosition(showLoc);
+}
+
+  /* geolocation is available */
+
+else {
+  /* geolocation IS NOT available */alert("no");
+}
+
+}
+
+function showLoc(pos)
+{
+alert(pos.coords.latitude);
+
+}
+</script>
+</body>
+
+</html>
+
