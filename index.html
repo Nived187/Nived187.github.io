@@ -8,7 +8,7 @@
 <p>Displaying location using Latitude and Longitude</p>
 <br>
 <div>
-<p id = "display"></p>
+<p id ="display"></p>
 </div>
 
 <button class="geeks" onclick="main()">
@@ -23,7 +23,7 @@
 function main()
 {
 if ('geolocation' in navigator) {
-	navigator.geolocation.getCurrentPosition(showLoc);
+	navigator.geolocation.watchPosition(showLoc);
 }
 
   /* geolocation is available */
@@ -36,7 +36,7 @@ else {
 
 function showLoc(pos)
 {
-document.getElementById("demo1").HTML="pos.coords.latitude+<br>+pos.coords.longitude";
+document.getElementById("display").innerHTML=pos.coords.latitude+"<br>"+pos.coords.longitude;
 
 
 }
@@ -44,4 +44,3 @@ document.getElementById("demo1").HTML="pos.coords.latitude+<br>+pos.coords.longi
 </body>
 
 </html>
-
