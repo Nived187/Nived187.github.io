@@ -6,9 +6,10 @@
 
 
 <p>Displaying location using Latitude and Longitude</p>
-
-
-
+<br>
+<div>
+<p id = "display"></p>
+</div>
 
 <button class="geeks" onclick="main()">
 	Click Me
@@ -35,7 +36,8 @@ else {
 
 function showLoc(pos)
 {
-alert(pos.coords.latitude);
+document.getElementById("display").text="pos.coords.latitude+<br>+pos.coords.longitude";
+
 
 }
 </script>
